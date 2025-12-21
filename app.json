@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Cartographia",
+    "slug": "cartographia-native",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#d4c5a9",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cartographia.explorer",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Cette app a besoin de votre position pour tracer votre parcours.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Cette app trace votre parcours même en arrière-plan.",
+        "NSLocationAlwaysUsageDescription": "Cette app a besoin d'accéder à votre position en arrière-plan.",
+        "UIBackgroundModes": [
+          "location"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.cartographia.explorer",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#d4c5a9"
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permet à Cartographia de tracer votre parcours même en arrière-plan.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ]
+  }
+}
