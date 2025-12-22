@@ -46,6 +46,11 @@
           "isAndroidForegroundServiceEnabled": true
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "auto-generate-on-first-build"
+      }
+    }
   }
 }
